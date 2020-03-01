@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
 
+*:focus {
+    border: 2px solid black;
+  }
+
+h1 {
+    font-size: 65px;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
@@ -19,11 +27,29 @@ header > nav {
     background-color: #000;
 }
 
+main {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+footer ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(8, auto); /* 8 col */
+}
+
+.footer-item {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-row: 1 / -1;
+}
+
 .nav-links {
     list-style: none;
-    /* flex */
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
@@ -41,10 +67,11 @@ header > nav {
 
 a:link {
     text-decoration: none;
-    color: #000;
 }
 
-
+.nav-item a {
+    color: #fff;
+}
 
 .nav-item a:hover {
     text-decoration: underline;
@@ -55,7 +82,7 @@ a:link {
     color: #fff;
 }
 
-a.jump {
+a.skip {
     background: white;
     left: 0;
     padding: 6px;
@@ -67,12 +94,13 @@ a.jump {
     z-index: 1;
 }
   
-a.jump:focus {
-top:20px;
-color: black;
--webkit-text-decoration-style: solid;
-        text-decoration-style: solid;
-}
+
+a.skip:focus {
+    top:20px;
+    color: black;
+    -webkit-text-decoration-style: solid;
+            text-decoration-style: solid;
+  }
 
 .thumbnail {
 width: auto;
@@ -88,4 +116,29 @@ height: 250px;
 
 .project-card:hover:after {
     opacity: 1;
+}
+
+.parallax {
+    background-image: url("../projects/assets/roots-parallex.jpg");
+  
+    /* Set a specific height */
+    height: 400px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+.content {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+.social-media-icon {
+    width: 35px;
+    height: auto;
 }
