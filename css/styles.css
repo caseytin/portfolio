@@ -257,8 +257,9 @@ a.skip:focus {
     transform: rotateY(180deg);
 }
 
+/* hover state */
 .play-card:hover .card-inner {
-    transform: rotateY(180deg);
+    opacity: 0.5;
 }
 
 .card-front, .card-back {
@@ -343,3 +344,7 @@ a.skip:focus {
     padding-bottom: 10px;
 }
 
+.pic {
+    width: 250px;
+    height: auto;
+}

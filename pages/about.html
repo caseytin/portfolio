@@ -11,6 +11,15 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:200&display=swap" rel="stylesheet">
         <!-- font awesome import -->
         <link href="../css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+        <!-- google analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160635420-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160635420-1');
+        </script>
     </head>
     <body>
         <a class="skip" href="#skip">Skip to Main Content</a>
@@ -30,7 +39,7 @@
                 <div class="about-left">
                     <h1 id="about-header">hi there.</h1>
                 <div class="about-image">
-                    <img src="../assets/pc.jpg" alt="headshot of casey" />
+                    <img src="../assets/pic.jpg" alt="headshot of casey" />
                 </div>
                 </div>
                 <div class="about-right">
@@ -58,6 +67,27 @@
             </div>
 
             <!-- contact form -->
+            <div class="container">
+                <form action="./form.php">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+              
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
 
         </main>
         <footer>
