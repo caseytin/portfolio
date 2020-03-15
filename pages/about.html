@@ -67,27 +67,27 @@
             </div>
 
             <!-- contact form -->
-            <div class="container">
-                <form action="./form.php">
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
-              
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-              
-                  <label for="country">Country</label>
-                  <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                  </select>
-              
-                  <label for="subject">Subject</label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-              
-                  <input type="submit" value="Submit">
+            <div class="contact-form">
+                <form
+                    class="about-left"
+                    action="https://formspree.io/mqklerwq"
+                    method="POST"
+                >
+                <label>
+                    Your email:
+                    <input type="text" name="_replyto">
+                </label>
+                <br/><br/>
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+
+                <!-- your other form fields go here -->
+
+                <button type="submit">Send</button>
                 </form>
-              </div>
+            </div>
 
         </main>
         <footer>

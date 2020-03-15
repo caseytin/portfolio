@@ -322,9 +322,9 @@ a.skip:focus {
     padding: 15px 80px;
 }
 
-.about-image {
+.about-image img {
     width: 250px;
-    height: 250px;
+    height: 240px;
     background-color: #bbb;
 }
 
@@ -344,7 +344,27 @@ a.skip:focus {
     padding-bottom: 10px;
 }
 
-.pic {
-    width: 250px;
-    height: auto;
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    padding: 15px 80px;
+}
+
+@media screen and (max-width: 800px) { 
+    .about-content {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .about-right {
+        font-size: 0.8rem;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
 }
