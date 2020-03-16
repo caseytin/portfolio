@@ -1,9 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
 
+
+/* keyframes */
+.fade {
+    -webkit-animation-name: fade-in;
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+}
+
+@keyframes typewriter {
+    from { 
+        width: 0; 
+    }
+    to { 
+        width: 15rem; 
+    }
+}
+@keyframes text-cursor {
+    from {
+        border-right-color: rgba(5,5,5,.75);
+    }
+    to { 
+        border-right-color: transparent;
+    }
+}
+
 /* main/work page and overall styling */
 *:focus {
-    border: 2px solid black;
+    border: 2px solid #000;
 }
 
 body {
@@ -29,9 +66,6 @@ main {
     padding-right: 40px;
 }
 
-
-/* animated text */
-
 .inline {
     top: 50%;
     width: 24rem;
@@ -45,23 +79,6 @@ main {
 .animated-text {
     animation: typewriter 4s steps(44) 1s 1 normal both,
                text-cursor 500ms steps(44) infinite normal;
-}
-
-@keyframes typewriter {
-    from { 
-        width: 0; 
-    }
-    to { 
-        width: 15rem; 
-    }
-}
-@keyframes text-cursor{
-    from {
-        border-right-color: rgba(5,5,5,.75);
-    }
-    to { 
-        border-right-color: transparent;
-    }
 }
 
 nav {
@@ -156,7 +173,7 @@ a:link {
 }
 
 a.skip {
-    background: white;
+    background: #fff;
     left: 0;
     padding: 6px;
     position: absolute;
@@ -169,7 +186,7 @@ a.skip {
 
 a.skip:focus {
     top:20px;
-    color: black;
+    color: #000;
     -webkit-text-decoration-style: solid;
             text-decoration-style: solid;
 }
@@ -211,25 +228,9 @@ a.skip:focus {
 
 .thumbnail:hover {
     filter: drop-shadow(4px 4px 4px #b0b0b0);
+    transform:scale(1.02);
     transition: all 0.7s;
-
 }
-
-@keyframes card-grow {
-    from {
-        transform:scale(1.0);
-    }
-    to {
-        transform:scale(1.2);
-    }
-  } 
-  
-  .card-grow {
-    -webkit-animation-name: card-grow;
-    -webkit-animation-duration: 0.7s;
-    animation-name: card-grow;
-    animation-duration: 0.7s;
-  }
 
 /* play page styling */
 
@@ -263,7 +264,7 @@ a.skip:focus {
 
 /* hover state */
 .play-card:hover .card-inner {
-    opacity: 0.5;
+    filter: opacity(0.5)
 }
 
 .card-front, .card-back {
@@ -276,12 +277,12 @@ a.skip:focus {
 
 .card-front {
     background-color: #000;
-    color: white;
+    color: #fff;
 }
 
 .card-back {
     background-color: #000;
-    color: white;
+    color: #fff;
     transform: rotateY(180deg);
     vertical-align: middle;
     line-height: normal
@@ -380,6 +381,12 @@ textarea {
     outline: none;
 }
 
+button {
+    padding: 20px;
+    outline: none;
+    color: #000;
+}
+
 @media screen and (max-width: 800px) { 
     .about-content {
         flex-direction: column;
@@ -434,3 +441,14 @@ textarea {
     background-size: cover;
     margin-bottom: 40px;
 }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .animated-text {
+        animation: none;
+    }
+
+    .fade {
+        animation: none;
+    }
+  }
