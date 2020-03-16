@@ -3,6 +3,7 @@
     <head>
         <title>casey tin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
         <!-- stylesheet imports -->
         <link href="../css/styles.css" type="text/css" rel="stylesheet"/>
         <link href="../css/html5reset.css" type="text/css" rel="stylesheet"/>
@@ -25,7 +26,7 @@
         <a class="skip" href="#skip">Skip to Main Content</a>
         <header>
             <nav>
-                <a href="../index.html"><img src="../assets/nav-emoji.png" alt="nav emoji"></a>
+                <a href="../index.html"><img src="../assets/nav-emoji.png" alt="nav emoji"></a> 
                 <ul class="nav-links">
                     <li class="nav-item"><a href="../index.html">work</a></li>
                     <li class="nav-item"><a href="play.html">play</a></li>
@@ -37,7 +38,7 @@
         <main id="skip">
             <div class="about-content">
                 <div class="about-left">
-                    <h1 id="about-header">hi there.</h1>
+                    <h1 id="about-header">hi there 🤟</h1>
                 <div class="about-image">
                     <img src="../assets/pic.jpg" alt="headshot of casey" />
                 </div>
@@ -52,7 +53,7 @@
                         in the intersection of design systems, web systems, and data,
                         and how they work together to impact users globally.
                         <br /><br />
-                        On campus, I work as instructional aide for SI 206: 
+                        On campus, I work as an instructional aide for SI 206: 
                         Data-Oriented Programming. My previous campus involvement
                         includes graphic/print design and product management work at 
                         <a href="michigandaily.com" target="_blank">The Michigan Daily</a>,
@@ -67,31 +68,33 @@
             </div>
 
             <!-- contact form -->
-            <div class="contact-form">
-                <form
-                    class="about-left"
+                <form class="contact-form"
                     action="https://formspree.io/mqklerwq"
                     method="POST"
                 >
-                <label>
-                    Your email:
-                    <input type="text" name="_replyto">
-                </label>
-                <br/><br/>
-                <label>
-                    Your message:
-                    <textarea name="message"></textarea>
-                </label>
-
-                <!-- your other form fields go here -->
-
-                <button type="submit">Send</button>
+                <fieldset>
+                    <legend id="contact-header">get in touch!</legend>
+                    <label>
+                        name:
+                        <br/><input type="text" id="name">
+                    </label>
+                    <br/><br/>
+                    <label>
+                        email:
+                        <br/><input type="text" id="email" name="_replyto">
+                    </label>
+                    <br/><br/>
+                    <label>
+                        enter message:
+                        <br/><textarea id="message" name="message"></textarea>
+                    </label>
+                    <br/><br/>
+                </fieldset>
+                <button type="submit">send</button>
                 </form>
-            </div>
-
         </main>
         <footer>
-            <p>stay in touch!</p>
+            <p>connect with me</p>
             <ul>
                 <li class="footer-item"><a href="https://www.instagram.com/caseytin.design/" target="_blank"><img class="social-media-icon" src="../assets/icons/instagram.svg" alt="instagram icon"></a></li>
                 <li class="footer-item"><a href="https://www.linkedin.com/in/caseytin" target="_blank"><img class="social-media-icon" src="../assets/icons/linkedin.svg" alt="linkedin icon"></a></li>
