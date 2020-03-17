@@ -238,6 +238,10 @@ a.skip:focus {
     .nav-item {
         padding: 5px;
     }
+
+    .project-container {
+        grid-template-columns: auto;
+    }
 }
 
 @media screen and (max-width: 550px) { 
@@ -458,9 +462,9 @@ button {
     }
 }
 
-@media screen and (max-width: 800px) {
-    .about-content {
-        padding: 10px;
+@media screen and (max-width: 550px) {
+    .about-image img {
+        display: none;
     }
 }
 
@@ -475,6 +479,15 @@ button {
 .resume-card {
     padding: 15px 120px;
     margin-bottom: 10px;
+}
+
+.resume-role {
+    font-weight: 700;
+    text-align: left;
+}
+
+.daterange {
+    text-align: right;
 }
 
 /* reduced motion */
