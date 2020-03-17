@@ -221,6 +221,14 @@ a.skip:focus {
     height: auto;
 }
 
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-self: center;
+    align-content: center;
+    justify-content: center;
+}
+
 @media screen and (max-width: 800px) { 
     .nav-links {
         flex-direction: column;
@@ -248,6 +256,10 @@ a.skip:focus {
 .thumbnail {
     width: auto;
     height: 250px;
+}
+
+.project-card {
+    margin: 15px;
 }
 
 .thumbnail:hover {
